@@ -1,0 +1,93 @@
+* {
+
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cell-background: #6583b1;
+  --background-color: #fefefe;
+  --color: #ffffff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background: var(--background-color);
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+    "heading heading heading"
+    "board board board"
+    "board board board"
+    "board board board"
+    "footer footer footer";
+}
+
+.heading {
+  grid-area: heading;
+  text-align: center;
+}
+
+.board {
+  grid-area: board;
+  margin: auto;
+  display: grid;
+  gap: .5em;
+  text-align: center;
+  width: 80vw;
+  min-width: 300px;
+  max-width: 600px;
+  grid-template-areas: 
+    "tl tm tr"
+    "ml mm mr"
+    "bl bm br";
+}
+
+.game-square {
+  background: var(--cell-background);
+  color: var(--color);
+  padding: 1em;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+
+/* Game Squares */
+.tl {
+  grid-area: tl;
+}
+.tm {
+  grid-area: tm;
+}
+.tr {
+  grid-area: tr;
+}
+.ml {
+  grid-area: ml;
+}
+.mm {
+  grid-area: mm;
+}
+.mr {
+  grid-area: mr;
+}
+.bl {
+  grid-area: bl;
+}
+.bm {
+  grid-area: bm;
+}
+.br {
+  grid-area: br;
+}
